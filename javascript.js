@@ -1,5 +1,3 @@
-// SET Variable for computerSelection and CALL function getComputerChoice
-
 // win <- 0, lose <- 0 rounds <- 0
 let win = 0, lose = 0, rounds = 0;
 
@@ -48,6 +46,7 @@ function playRound(playerSelection, computerSelection) {
 // Create function playGame for 5 rounds game
 function playGame() {
   while (rounds < 5) {
+    // CALL function getComputerChoice -> computerSelection
     let computerSelection = getComputerChoice();
     console.log("computer chooses " + computerSelection + "!");
 
@@ -60,12 +59,12 @@ function playGame() {
     };
     console.log("Player chooses " + playerSelection + "!");
 
-    // CALL function playRound and SET as variable roundResult
+    // CALL function playRound -> roundResult
     let roundResult = playRound(playerSelection, computerSelection);
     console.log(roundResult);
 };
 
-    if (win > lose) {
+  if (win > lose) {
     console.log("Congratulations, you win!");
   } else if (win < lose) {
     console.log("You lost. Better luck next time!");
