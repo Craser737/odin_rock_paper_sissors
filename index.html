@@ -3,10 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./javascript.js"></script>
+    <script src="./javascript.js" defer></script>
     <title>Rock, Scissors, Paper</title>
 </head>
 <body>
-  <h2>Press "F12" and click on the Console Tab to see game results.</h2>
+<button id="rock">Rock</button>
+<button id="scissors">Scissors</button>
+<button id="paper">Paper</button>
+<div>
+  <span><strong>Player Chooses:</strong></span>
+  <span id="player"></span>
+  <span><strong>Computer Chooses:</strong></span>
+  <span id="computer"></span>
+  <ul id="round">
+  </ul>
+  <p id="final"></p>
+</div>
 </body>
 </html>
