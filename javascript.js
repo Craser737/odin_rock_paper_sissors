@@ -15,9 +15,7 @@ function getComputerChoice() {
         return "paper"; }
 };
 
-// COMPARE playerSelection to computerSelection
-// increment win, lose, rounds as appropriate 
-// DISPLAY a win/lose message for each combination
+// COMPARE playerSelection to computerSelection and output results for 1 round
 function playRound(playerSelection, computerSelection) {
   if (playerSelection === "rock" && computerSelection === "scissors") {
     win = ++win, rounds = ++rounds;
@@ -46,20 +44,17 @@ function playRound(playerSelection, computerSelection) {
 // Create function playGame for 5 rounds game
 function playGame() {
   while (rounds < 5) {
-    // CALL function getComputerChoice -> computerSelection
     let computerSelection = getComputerChoice();
     console.log("computer chooses " + computerSelection + "!");
 
-// GET input for player selection, SET to lower case, ASSIGN to variable playerSelection
+    // GET valid player selection
     let playerSelection = prompt("Rock, scissors, or paper?").toLowerCase();
-
-// DETERMINE input is valid or prompt for re-entry
     while (playerSelection !== "rock" && playerSelection !== "scissors" && playerSelection !== "paper") {
     playerSelection = prompt("Invalid entry. Please try rock, scissors, or paper?").toLowerCase();
     };
     console.log("Player chooses " + playerSelection + "!");
 
-    // CALL function playRound -> roundResult
+    // CALL function playRound 
     let roundResult = playRound(playerSelection, computerSelection);
     console.log(roundResult);
 };
@@ -73,7 +68,4 @@ function playGame() {
   };
   }
 
-
-// playRound function INCREMENTS win or lose, and rounds
-// FOR rounds = 5, COMPARE win to lose and DISPLAY Win/lose message
 
